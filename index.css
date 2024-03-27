@@ -89,6 +89,7 @@ a:hover {
 
 .menu-links {
     position: absolute;
+    z-index: 999;
     top: 100%;
     right: 0;
     background-color: white;
