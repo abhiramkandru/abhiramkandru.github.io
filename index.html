@@ -1,330 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Abhiram Kandru</title>
-    <link rel="stylesheet" href="index.css"/>
-    <link rel="stylesheet" href="mediaqueries.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhiram Kandru — Software Engineer</title>
+  <meta name="description" content="Abhiram Kandru — Computer Science @ Rutgers. Distributed systems, ML infrastructure, and reinforcement learning." />
+  <meta name="theme-color" content="#0b0b0b" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
 </head>
 <body>
-    <nav id="desktop-nav">
-        <div class="logo">Abhiram Kandru</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Abhiram Kandru</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>               
-            </div>
-        </div>
-    </nav>
-    <section id="about">
-          </div>
-          <div class="about-details-container">
-            <div class="about-containers">
-              <div class="details-container">
-                <img
-                  src="./assets/experience.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <h3>Experience</h3>
-                <p>Open Source @ GNOME</p>
-              </div>
-              <div class="details-container">
-                <img
-                  src="./assets/education.png"
-                  alt="Education icon"
-                  class="icon"
-                  
-                  <p><h3>Education</h3>B.S. Comp. Sci: Rutgers-NB<br>Minor in Data Science</p>
-              </div>
-            </div>
-            <div class="text-container">
-              <p>
-                I'm Abhiram Kandru, a student at Rutgers University.
-                I chose to pursue computer science over any other major with the intent to come out of the
-                program with strong problem-solving skills. To accomplish this, I will be spending the 
-                next few years developing personal projects and tinkering with various frameworks and tech stacks.
-                I will also continue to be involved in student activities that tie into my academics and interests.
-                <br><br>
-                In addition to what I mentioned above, I love to run, read, listen to music, and play basketball. These activities
-                help me stay energized and productive on my lifelong learning journey.
-                
+  <!-- ============ INTRO ============ -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__logo">
+      <span class="intro__letter" style="--i:0">A</span><span class="intro__letter" style="--i:1">K</span>
+      <div class="intro__beams">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+    </div>
+  </div>
 
-                
-              </p>
-            </div>
-          </div>
+  <!-- film grain -->
+  <svg class="grain" aria-hidden="true"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#noise)"/></svg>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__brand" aria-label="Abhiram Kandru home">KANDRU</a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#top">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav__right">
+      <a class="nav__icon" href="https://github.com/abhiramkandru" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.7 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+      </a>
+      <a class="nav__avatar" href="#contact" aria-label="Contact">AK</a>
+      <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO / BILLBOARD ============ -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__glow"></div>
+        <div class="hero__grid"></div>
+        <pre class="hero__code">$ kubectl get pods -n inference
+NAME                      READY   STATUS
+serve-vllm-7f9c-gpu0      1/1     Running
+serve-vllm-7f9c-gpu1      1/1     Running
+torchserve-trt-5d2a       1/1     Running
+prometheus-0              1/1     Running
+
+p50  41ms   p95  118ms   rps  1,204
+throughput  3.0x   p95 latency  -45%
+$ wrangler deploy
+  Uploaded cf_ai_edge_nav
+  Durable Objects: KnowledgeStore (SQLite)
+  Workflows: CrawlWorkflow
+  AI: @cf/meta/llama-3.3-70b
+$ _</pre>
+      </div>
+
+      <div class="hero__content">
+        <p class="hero__kicker"><span class="hero__mono">AK</span> O R I G I N A L &nbsp; S E R I E S</p>
+        <h1 class="hero__title">
+          <span class="hero__line">Abhiram</span>
+          <span class="hero__line hero__line--accent">Kandru</span>
+        </h1>
+        <div class="hero__top10">
+          <span class="top10-badge"><b>TOP</b><b>10</b></span>
+          <span>#1 in Distributed Systems Today</span>
         </div>
-        </section>
-        <section id="experience">
-            <p class="section__text__p1">Explore My</p>
-            <h1 class="title">Skills</h1>
-            <div class="experience-details-container">
-              <div class="about-containers">
-                <div class="details-container">
-                  <h2 class="experience-sub-title">Frontend Development</h2>
-                  <div class="article-container">
-                    <article>
-                      <img
-                        src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon"
-                      />
-                      <div>
-                        <h3>HTML</h3>
-                      </div>
-                    </article>
-                    <article>
-                      <img
-                        src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon"
-                      />
-                      <div>
-                        <h3>CSS</h3>
-                      </div>
-                    </article>
-                    <article>
-                      <img
-                        src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon"
-                      />
-                      <div>
-                        <h3>XML</h3>
-                      </div>
-                    </article>
-                    <article>
-                      <img
-                        src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon"
-                      />
-                      <div> 
-                        <h3>JavaScript</h3>
-                      </div>
-                    </article>
-                    <article>
-                      <img
-                        src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon"
-                      />
-                      <div>
-                        <h3>TypeScript</h3>
-                      </div>
-                    </article>
-                    <article>
-                      <img
-                        src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon"
-                      />
-                      <div>
-                        <h3>Figma</h3>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-                <div class="details-container">
-                  <h2 class="experience-sub-title">Backend Development</h2>
-                  <div class="article-container">
-                    <article>
-                      <img
-                        src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon"
-                      />
-                      <div>
-                        <h3>PostgreSQL</h3>
-                      </div>
-                    </article>
-                    <article>
-                      <img
-                        src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon"
-                      />
-                      <div>
-                        <h3>Angular</h3>
-                      </div>
-                    </article>
-                    <article>
-                      <img
-                        src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon"
-                      />
-                      <div>
-                        <h3>Python</h3>
-                      </div>
-                    </article>
-                    <article>
-                      <img
-                        src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon"
-                      />
-                      <div>
-                        <h3>R</h3>
-                      </div>
-                    </article>
-                    <article>
-                      <img
-                        src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon"
-                      />
-                      <div>
-                        <h3>AWS</h3>
-                      </div>
-                    </article>
-                    <article>
-                      <img
-                        src="./assets/checkmark.png"
-                        alt="Experience icon"
-                        class="icon"
-                      />
-                      <div>
-                        <h3>Java</h3>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-  
+        <div class="meta">
+          <span class="meta__match">98% Match</span>
+          <span>Rutgers CS</span>
+          <span class="meta__badge">ML</span>
+          <span>Minor: Data Science</span>
+          <span class="meta__badge">HD</span>
+        </div>
+        <p class="hero__desc">
+          Computer Science student building <strong>scalable, cloud-native systems</strong> at the
+          intersection of SWE, distributed systems and machine learning. Shipped ML infrastructure
+          at a <strong>Y&nbsp;Combinator</strong> startup. Comfortable across model-free, model-based,
+          multi-task, hierarchical and multi-agent <strong>reinforcement learning</strong>.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--play" href="#projects">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l15 8-15 8z"/></svg>
+            Play
+          </a>
+          <button class="btn btn--info" type="button" data-open="about">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 11v6M12 7.5v.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+            More Info
+          </button>
+        </div>
+      </div>
+
+      <div class="hero__rating" aria-hidden="true">
+        <span>US Citizen</span>
+      </div>
     </section>
-    <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/project-1.png"
-                  alt="Project 1"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Project One -<br>This website!</h2>
-              <p>I utilized HTML, CSS, and JavaScript to make this website. I will be continuing to improve and update this website as I learn more about web development.
-                You can find the source code on my GitHub:<br><br>
-              </p>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/abhiramkandru/abhiramkandru.github.io'"
-                >
-                  Github
-                </button>
-              </div>
-            </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/project-2.png"
-                  alt="Project 2"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Project Two -<br>Investment Banking Club Stock Pitch</h2>
-              <p>- Issued buy rating for CAT: NYSE stock on Dec 7, 2023<br>
 
-                - Developed investment thesis using comparable comps. analysis<br>
-                
-                - Organized qualitative aspect of presentation by conducting SWOT analysis + analyzing risks and cost drivers</p>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://rutgersconnect-my.sharepoint.com/:p:/g/personal/jjp365_scarletmail_rutgers_edu/Efe-nz0tWQdEvp8lt4u18QABZhEYpO2gcXw3AxKQIrRBdg?e=Ygc3B3'"
-                >
-                  Presentation
-                </button>
-              </div>
+    <!-- ============ PROJECTS — TOP 3 ROW ============ -->
+    <section class="row reveal" id="projects">
+      <h2 class="row__title">Top 3 Projects Right Now <a class="row__explore" href="https://github.com/abhiramkandru?tab=repositories" target="_blank" rel="noopener">Explore All <i>›</i></a></h2>
+      <div class="row__track row__track--ranked">
+
+        <!-- Project 1 -->
+        <article class="title-card" tabindex="0" data-open="p1">
+          <span class="rank" aria-hidden="true">1</span>
+          <div class="poster poster--serve">
+            <span class="poster__mono">AK</span>
+            <div class="poster__bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <h3 class="poster__title">Model<br>Serving</h3>
+            <span class="poster__tag">Real-Time Dashboard</span>
+          </div>
+          <div class="title-card__hover">
+            <div class="title-card__btns">
+              <a class="circle circle--play" href="https://github.com/abhiramkandru/Scalable-Model-Serving-API2" target="_blank" rel="noopener" aria-label="Open Scalable Model Serving API on GitHub"><svg viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"/></svg></a>
+              <button class="circle" type="button" data-open="p1" aria-label="More info"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></button>
             </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/project-3.png"
-                  alt="Project 3"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Project Three - Rutgers Blueprint Fellowship - UI/UX Design</h2>
-              <p>- Selected among 100s of applicants<br>
-                - Wireframing: Built schematics for a company that does not have a mobile application yet<br>
-                - Visual design: Applied design concepts such as typography, color theory, and font pairing in Figma<br>
-                </p>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://www.figma.com/proto/sCZh2dMQJvy1l740PGErqo/Semi-Colon-Hi-fi-wireframe?node-id=10-5&starting-point-node-id=19%3A76&mode=design&t=73LWMxXOEJfqP6NF-1'"
-                >
-                  Live Demo
-                </button>
-              </div>
+            <div class="meta meta--sm"><span class="meta__match">99% Match</span><span class="meta__badge">GPU</span><span>4 Episodes</span></div>
+            <p class="genres">vLLM <i>•</i> GKE <i>•</i> Vertex AI <i>•</i> Prometheus</p>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="title-card" tabindex="0" data-open="p2">
+          <span class="rank" aria-hidden="true">2</span>
+          <div class="poster poster--storage">
+            <span class="poster__mono">AK</span>
+            <div class="poster__stack" aria-hidden="true"><i>v1</i><i>v2</i><i>v3</i><i>v4</i></div>
+            <h3 class="poster__title">Cloud<br>Storage</h3>
+            <span class="poster__tag">Versioning + GPU Preprocessing</span>
+          </div>
+          <div class="title-card__hover">
+            <div class="title-card__btns">
+              <a class="circle circle--play" href="https://github.com/abhiramkandru/Cloud-File-Storage-With-Versioning2" target="_blank" rel="noopener" aria-label="Open Cloud File Storage on GitHub"><svg viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"/></svg></a>
+              <button class="circle" type="button" data-open="p2" aria-label="More info"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></button>
             </div>
+            <div class="meta meta--sm"><span class="meta__match">97% Match</span><span class="meta__badge">CUDA</span><span>4 Episodes</span></div>
+            <p class="genres">MinIO <i>•</i> Kubernetes <i>•</i> JAX <i>•</i> Redis</p>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="title-card" tabindex="0" data-open="p3">
+          <span class="rank" aria-hidden="true">3</span>
+          <div class="poster poster--edge">
+            <span class="poster__mono">AK</span>
+            <div class="poster__orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+            <h3 class="poster__title">The<br>Edge</h3>
+            <span class="poster__tag">Workers AI Web Summarizer</span>
+          </div>
+          <div class="title-card__hover">
+            <div class="title-card__btns">
+              <a class="circle circle--play" href="https://github.com/abhiramkandru/cf_ai_edge_nav" target="_blank" rel="noopener" aria-label="Open Cloudflare Workers AI Web Summarizer on GitHub"><svg viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"/></svg></a>
+              <button class="circle" type="button" data-open="p3" aria-label="More info"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5"/></svg></button>
+            </div>
+            <div class="meta meta--sm"><span class="meta__match">96% Match</span><span class="meta__badge">NEW</span><span>2 Episodes</span></div>
+            <p class="genres">Llama 3.3 <i>•</i> Durable Objects <i>•</i> Workflows</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE — EPISODES ============ -->
+    <section class="row reveal" id="experience">
+      <div class="episodes">
+        <div class="episodes__head">
+          <h2 class="row__title row__title--flush">Experience</h2>
+          <div class="season-picker" role="tablist" aria-label="Select season">
+            <button role="tab" class="season is-active" aria-selected="true" data-season="s1">Season 1: Venu AI</button>
+            <button role="tab" class="season" aria-selected="false" data-season="s2">Season 2: Leadership</button>
           </div>
         </div>
-      </section>
-      <br><br><br><br><br><br><br><br><br><br><br><br>
-      <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-          <div class="contact-info-container">
-            <img
-              src="./assets/email.png"
-              alt="Email icon"
-              class="icon contact-icon email-icon"
-            />
-            <p><a href="mailto:abhiramkandru123@gmail.com">abhiramkandru123@gmail.com</a></p>
+
+        <div class="season-panel is-active" id="s1" role="tabpanel">
+          <div class="show-card">
+            <div class="show-card__art show-card__art--yc"><span>Y</span></div>
+            <div class="show-card__body">
+              <p class="show-card__eyebrow">Y Combinator Startup · W21</p>
+              <h3>Venu AI — Software Engineering Intern, ML Infrastructure</h3>
+              <div class="meta meta--sm"><span>May 2024 – Aug 2024</span><span class="meta__badge">REMOTE</span><span>San Francisco, CA</span></div>
+              <div class="progress" aria-label="Completed"><span style="--p:100%"></span></div>
+            </div>
           </div>
-          <div class="contact-info-container">
-            <img
-              src="./assets/linkedin.png"
-              alt="LinkedIn icon"
-              class="icon contact-icon"
-            />
-            <p><a href="https://www.linkedin.com/in/abhiram-kandru-850681153/">LinkedIn</a></p>
-          </div>
+          <ol class="ep-list">
+            <li class="ep">
+              <span class="ep__num">1</span>
+              <div class="ep__thumb ep__thumb--a"><b>+15%</b></div>
+              <div class="ep__text">
+                <h4>Search &amp; Retrieval at Scale <span class="ep__dur">ElasticSearch</span></h4>
+                <p>Optimized scalable search indexing and retrieval infrastructure using ElasticSearch integrated with transformer models (BERT, LLaMA-2, GPT-3.5), improving semantic ranking precision by ~15% across distributed inference endpoints.</p>
+              </div>
+            </li>
+            <li class="ep">
+              <span class="ep__num">2</span>
+              <div class="ep__thumb ep__thumb--b"><b>−50%</b></div>
+              <div class="ep__text">
+                <h4>Automation Pipelines <span class="ep__dur">Python · PostgreSQL</span></h4>
+                <p>Refactored and deployed backend automation pipelines in Python, PostgreSQL and Linux, integrating secure user authentication flows with OAuth 2.0 and JWT-based access control — cutting recruiter workload by ~50% as measured by task completion times.</p>
+              </div>
+            </li>
+            <li class="ep">
+              <span class="ep__num">3</span>
+              <div class="ep__thumb ep__thumb--c"><b>CI/CD</b></div>
+              <div class="ep__text">
+                <h4>Multi-Region Delivery <span class="ep__dur">Jenkins · Docker</span></h4>
+                <p>Implemented distributed CI/CD pipelines with Jenkins + Docker to automate multi-region deployments of ML microservices across AWS EC2, AWS Lambda and GCP, improving release reliability and system scalability.</p>
+              </div>
+            </li>
+            <li class="ep">
+              <span class="ep__num">4</span>
+              <div class="ep__thumb ep__thumb--d"><b>TS</b></div>
+              <div class="ep__text">
+                <h4>Recruiter Dashboards <span class="ep__dur">React · TypeScript</span></h4>
+                <p>Developed React (JavaScript/TypeScript) web modules integrated with REST APIs in an agile, test-driven environment, building secure recruiter dashboards that improved visibility and streamlined evaluation workflows.</p>
+              </div>
+            </li>
+          </ol>
         </div>
-      </section>
-      <footer>
-        <nav>
-          <div class="nav-links-container">
-            <ul class="nav-links">
-              <li><a href="#about">About</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
+
+        <div class="season-panel" id="s2" role="tabpanel" hidden>
+          <div class="show-card">
+            <div class="show-card__art show-card__art--bot"><span>⚙</span></div>
+            <div class="show-card__body">
+              <p class="show-card__eyebrow">Teaching Assistant Role</p>
+              <h3>Assistant High School Robotics Coach</h3>
+              <div class="meta meta--sm"><span>Sept 2024 – Present</span><span class="meta__badge">LIVE</span><span>New Brunswick, NJ</span></div>
+              <div class="progress progress--live" aria-label="Ongoing"><span style="--p:70%"></span></div>
+            </div>
           </div>
-        </nav>
-  
-    <script src="index.js"></script>
+          <ol class="ep-list">
+            <li class="ep">
+              <span class="ep__num">1</span>
+              <div class="ep__thumb ep__thumb--e"><b>A*</b></div>
+              <div class="ep__text">
+                <h4>Shortest Paths <span class="ep__dur">Dijkstra · Bellman-Ford · DP</span></h4>
+                <p>Applied graph and dynamic programming algorithms in Java/Python robotics projects to optimize path planning and resource allocation, improving efficiency in grid-based logistics navigation problems.</p>
+              </div>
+            </li>
+            <li class="ep">
+              <span class="ep__num">2</span>
+              <div class="ep__thumb ep__thumb--f"><b>O(n)</b></div>
+              <div class="ep__text">
+                <h4>Scheduling &amp; Cost Minimization <span class="ep__dur">Greedy · D&amp;C</span></h4>
+                <p>Modeled scheduling and cost-minimization workflows using divide-and-conquer, greedy methods and dynamic programming, achieving measurable improvements in task assignment efficiency and computational complexity tradeoffs.</p>
+              </div>
+            </li>
+            <li class="ep">
+              <span class="ep__num">3</span>
+              <div class="ep__thumb ep__thumb--g"><b>LP</b></div>
+              <div class="ep__text">
+                <h4>Linear Programming <span class="ep__dur">Python · SciPy</span></h4>
+                <p>Built linear programming models for robot-task assignment, warehouse grid logistics optimization and dispatch workflows, demonstrating end-to-end systems design with modularity, version control and reproducible best practices.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION — COURSEWORK ROW ============ -->
+    <section class="row reveal" id="education">
+      <h2 class="row__title">Because You Studied <span class="accent">Computer Science</span></h2>
+      <p class="row__sub"><strong>Rutgers University</strong> — B.S. in Computer Science, Minor in Data Science · New Brunswick, NJ</p>
+      <div class="row__wrap">
+        <button class="row__arrow row__arrow--l" type="button" aria-label="Scroll left" data-scroll="-1">‹</button>
+        <div class="row__track row__track--courses" id="courses">
+          <div class="course" style="--h:0"><span>CS344</span><b>Algorithms</b></div>
+          <div class="course" style="--h:200"><span>CS416</span><b>Operating Systems</b></div>
+          <div class="course" style="--h:330"><span>CS461</span><b>Machine Learning Principles</b></div>
+          <div class="course" style="--h:160"><span>CS439</span><b>Intro to Data Science</b></div>
+          <div class="course" style="--h:30"><span>CS460</span><b>Computational Robotics</b></div>
+          <div class="course" style="--h:260"><span>CS336</span><b>Database Management</b></div>
+          <div class="course" style="--h:300"><span>CS211</span><b>Computer Architecture</b></div>
+          <div class="course" style="--h:110"><span>CS112</span><b>Data Structures</b></div>
+          <div class="course" style="--h:350"><span>CS214</span><b>Systems Programming</b></div>
+        </div>
+        <button class="row__arrow row__arrow--r" type="button" aria-label="Scroll right" data-scroll="1">›</button>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS — MARQUEE ============ -->
+    <section class="row reveal" id="skills">
+      <h2 class="row__title">Now Streaming: The Stack</h2>
+      <div class="marquee">
+        <div class="marquee__track">
+          <span>Java</span><span>Python</span><span>C/C++</span><span>JavaScript</span><span>TypeScript</span><span>Go</span><span>SQL</span><span>PyBullet</span><span>React</span><span>Docker</span><span>Kubernetes (GKE)</span><span>AWS</span><span>GCP</span>
+          <span aria-hidden="true">Java</span><span aria-hidden="true">Python</span><span aria-hidden="true">C/C++</span><span aria-hidden="true">JavaScript</span><span aria-hidden="true">TypeScript</span><span aria-hidden="true">Go</span><span aria-hidden="true">SQL</span><span aria-hidden="true">PyBullet</span><span aria-hidden="true">React</span><span aria-hidden="true">Docker</span><span aria-hidden="true">Kubernetes (GKE)</span><span aria-hidden="true">AWS</span><span aria-hidden="true">GCP</span>
+        </div>
+      </div>
+      <div class="marquee marquee--rev">
+        <div class="marquee__track">
+          <span>Redis</span><span>Apache Spark</span><span>PostgreSQL</span><span>MongoDB</span><span>MinIO</span><span>Lucene</span><span>JAX</span><span>PyTorch</span><span>TensorRT</span><span>NumPy</span><span>Pandas</span><span>TensorFlow</span><span>Prometheus</span><span>Grafana</span>
+          <span aria-hidden="true">Redis</span><span aria-hidden="true">Apache Spark</span><span aria-hidden="true">PostgreSQL</span><span aria-hidden="true">MongoDB</span><span aria-hidden="true">MinIO</span><span aria-hidden="true">Lucene</span><span aria-hidden="true">JAX</span><span aria-hidden="true">PyTorch</span><span aria-hidden="true">TensorRT</span><span aria-hidden="true">NumPy</span><span aria-hidden="true">Pandas</span><span aria-hidden="true">TensorFlow</span><span aria-hidden="true">Prometheus</span><span aria-hidden="true">Grafana</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT CTA ============ -->
+    <section class="cta reveal" id="contact">
+      <div class="cta__curve" aria-hidden="true"></div>
+      <h2 class="cta__title">Unlimited systems, ML, and more.</h2>
+      <p class="cta__sub">Ready to hire? Starts at one email. Cancel never.</p>
+      <div class="cta__actions">
+        <a class="btn btn--red btn--lg" href="mailto:kandruabhiram1@gmail.com">Get Started <span aria-hidden="true">›</span></a>
+      </div>
+      <div class="cta__links">
+        <a href="mailto:kandruabhiram1@gmail.com">kandruabhiram1@gmail.com</a>
+        <a href="https://github.com/abhiramkandru" target="_blank" rel="noopener">github.com/abhiramkandru</a>
+        <a href="https://www.linkedin.com/in/abhiram-kandru-850681153/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Questions? <a href="mailto:kandruabhiram1@gmail.com">kandruabhiram1@gmail.com</a></p>
+    <ul class="footer__grid">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="https://github.com/abhiramkandru/Scalable-Model-Serving-API2" target="_blank" rel="noopener">Model Serving API</a></li>
+      <li><a href="https://github.com/abhiramkandru/Cloud-File-Storage-With-Versioning2" target="_blank" rel="noopener">Cloud File Storage</a></li>
+      <li><a href="https://github.com/abhiramkandru/cf_ai_edge_nav" target="_blank" rel="noopener">Edge Navigator</a></li>
+      <li><a href="https://www.linkedin.com/in/abhiram-kandru-850681153/" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+    <p class="footer__small">© <span id="year">2026</span> Abhiram Kandru · Built by hand with HTML &amp; CSS. No frameworks were harmed.</p>
+  </footer>
+
+  <!-- ============ DETAIL MODAL ============ -->
+  <dialog class="modal" id="modal" aria-labelledby="modalTitle">
+    <button class="modal__close" type="button" aria-label="Close" data-close>✕</button>
+    <div id="modalBody"></div>
+  </dialog>
+
+  <!-- Modal content templates -->
+  <template id="tpl-p1">
+    <div class="modal__hero poster--serve">
+      <div class="poster__bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="modal__heroText">
+        <h2 id="modalTitle">Scalable Model Serving API + Real-Time Dashboard</h2>
+        <a class="btn btn--play" href="https://github.com/abhiramkandru/Scalable-Model-Serving-API2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l15 8-15 8z"/></svg> View on GitHub</a>
+      </div>
+    </div>
+    <div class="modal__content">
+      <div class="meta"><span class="meta__match">99% Match</span><span class="meta__badge">GPU</span><span>3× throughput</span><span>−45% p95</span></div>
+      <ul class="modal__list">
+        <li>Optimized <strong>large-model inference</strong> on Google Cloud (<strong>Vertex AI + GKE</strong>) for 3× throughput and ~45% lower p95 latency using <strong>vLLM/SGLang-style batching</strong>, KV-cache reuse and GPU-accelerated <strong>TorchServe/TensorRT/TensorFlow</strong>.</li>
+        <li>Deployed <strong>Kubernetes-based microservices (GKE)</strong> with autoscaling and GPU node affinity to sustain <strong>1k+ RPS</strong> inference traffic across distributed containers, integrating Vertex AI monitoring endpoints for performance validation.</li>
+        <li>Built a <strong>React + Tailwind monitoring dashboard</strong> displaying live GPU utilization, p50/p95 latency and batch queue metrics from Prometheus-instrumented inference nodes, enabling on-the-fly runtime config updates and shadow traffic rollouts.</li>
+        <li>Integrated <strong>Prometheus/Grafana</strong> for GPU/CPU telemetry and error-budget SLOs, enabling distributed traceability and secure developer access across multi-tenant inference clusters.</li>
+      </ul>
+      <p class="modal__cast"><span>Stack:</span> Vertex AI, GKE, vLLM, SGLang, TorchServe, TensorRT, React, Tailwind, Prometheus, Grafana</p>
+    </div>
+  </template>
+
+  <template id="tpl-p2">
+    <div class="modal__hero poster--storage">
+      <div class="poster__stack" aria-hidden="true"><i>v1</i><i>v2</i><i>v3</i><i>v4</i></div>
+      <div class="modal__heroText">
+        <h2 id="modalTitle">Cloud File Storage with Versioning + GPU-Accelerated Preprocessing</h2>
+        <a class="btn btn--play" href="https://github.com/abhiramkandru/Cloud-File-Storage-With-Versioning2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l15 8-15 8z"/></svg> View on GitHub</a>
+      </div>
+    </div>
+    <div class="modal__content">
+      <div class="meta"><span class="meta__match">97% Match</span><span class="meta__badge">CUDA</span><span>3k+ uploads/min</span><span>99.7% reliability</span></div>
+      <ul class="modal__list">
+        <li>Designed a cloud-native <strong>distributed object storage and indexing system</strong> handling <strong>3k+ uploads/min</strong> with content-addressed versioning, pre-signed URLs and GFS-style consistency across <strong>GCP + MinIO</strong> backends for scalable metadata retrieval and search.</li>
+        <li>Accelerated data ingestion by ~60% using a <strong>GPU preprocessing pipeline (CUDA/Numba + JAX transforms)</strong>, orchestrated through Kubernetes GPU nodes for parallel compute scaling across cloud clusters.</li>
+        <li>Achieved <strong>99.7% pipeline reliability</strong> by deploying fault-tolerant distributed workers with Redis queues, retry logic and autoscaling on cloud-hosted Kubernetes clusters for resilient multi-GPU execution.</li>
+        <li>Integrated <strong>Prometheus/Grafana dashboards</strong> with automated SLO enforcement (e.g., 99% preprocess &lt; 500 ms) and <strong>multi-user RBAC</strong> to monitor multi-task performance across multi-region cloud nodes.</li>
+      </ul>
+      <p class="modal__cast"><span>Stack:</span> GCP, MinIO, Kubernetes, CUDA, Numba, JAX, Redis, Prometheus, Grafana</p>
+    </div>
+  </template>
+
+  <template id="tpl-p3">
+    <div class="modal__hero poster--edge">
+      <div class="poster__orbit" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="modal__heroText">
+        <h2 id="modalTitle">Cloudflare Workers AI Web Summarizer</h2>
+        <a class="btn btn--play" href="https://github.com/abhiramkandru/cf_ai_edge_nav" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l15 8-15 8z"/></svg> View on GitHub</a>
+      </div>
+    </div>
+    <div class="modal__content">
+      <div class="meta"><span class="meta__match">96% Match</span><span class="meta__badge">NEW</span><span>Serverless</span><span>Runs at the edge</span></div>
+      <ul class="modal__list">
+        <li>Built an <strong>AI-powered knowledge navigator</strong> on <em>Cloudflare Workers</em> using <strong>Llama 3.3 on Workers AI</strong>, <strong>Workflows</strong> and <strong>Durable Objects (SQLite)</strong> to provide contextual retrieval and feedback-driven adaptive memory at the edge.</li>
+        <li>Built a serverless pipeline for crawling and summarizing websites with Workflows, Durable Objects and Workers AI, and deployed an interactive <strong>chat + voice UI</strong> via <strong>Pages + Realtime</strong> to demonstrate full-stack use of the Cloudflare Developer Platform.</li>
+      </ul>
+      <p class="modal__cast"><span>Stack:</span> Cloudflare Workers, Workers AI (Llama 3.3, bge embeddings, Whisper), Workflows, Durable Objects, TypeScript</p>
+    </div>
+  </template>
+
+  <template id="tpl-about">
+    <div class="modal__hero modal__hero--about">
+      <div class="modal__heroText">
+        <h2 id="modalTitle">Abhiram Kandru</h2>
+        <a class="btn btn--play" href="mailto:kandruabhiram1@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l15 8-15 8z"/></svg> Say Hello</a>
+      </div>
+    </div>
+    <div class="modal__content">
+      <div class="meta"><span class="meta__match">98% Match</span><span class="meta__badge">SWE</span><span>US Citizen</span></div>
+      <p class="modal__lead">Computer Science student with experience in SWE, distributed systems and machine learning. Skilled in scalable cloud-native systems for automation and robotics; familiar with model-free, model-based, multi-task, hierarchical and multi-agent reinforcement learning.</p>
+      <div class="modal__cols">
+        <div>
+          <h3>Education</h3>
+          <p><strong>Rutgers University</strong> — New Brunswick, NJ<br>B.S. Computer Science, Minor in Data Science</p>
+        </div>
+        <div>
+          <h3>Currently</h3>
+          <p>Coaching high-school robotics and building ML infrastructure side projects on GCP and Cloudflare.</p>
+        </div>
+      </div>
+      <p class="modal__cast"><span>Genres:</span> Distributed Systems, ML Infrastructure, Reinforcement Learning, Robotics</p>
+    </div>
+  </template>
+
+  <script src="index.js"></script>
 </body>
 </html>
